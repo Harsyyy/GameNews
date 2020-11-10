@@ -83,3 +83,15 @@ form {
     padding: 8px 10px;
     min-height: 80px;
   }
+
+  input,
+  textarea, 
+  div {
+    &.error {
+      border-color: $errorColor !important;
+      color: $errorColor;
+      &::placeholder {
+        color: lighten($errorColor, 20%);
+      }
+    }
+  }

@@ -1,5 +1,6 @@
 <div class="sidebar">
     <div class="box auth">
+        <% if(!user.id && !user.login) { %> <!-- %= чтобы вывести переменную -->
 
         <form method="post" class="login">
              <h2>Вход</h2>
@@ -33,10 +34,18 @@
              </div>
              <div class="buttons">
                  <button class="switch-button secondary-inverse">Вход</button>
-                 <button class="login-button">Регистрация</button>
+                 <button class="register-button">Создать</button>
              </div>
         </form>
 
+        <% } else { %>
+            <p>
+                Привет, <%= user.login %>! <a href="/api/auth/logout"> Выход </a>
+            </p>
+        <% } %>
+        
     </div>
-    <div class="box">box2</div>
+    <!-- <div class="box">
+        box 
+    </div> -->
 </div>

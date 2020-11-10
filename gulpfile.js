@@ -26,11 +26,13 @@ gulp.task('scss', () => {
 gulp.task('scripts', () =>
   gulp
     .src([
-      'dev/js/auth.js'
+      'dev/js/auth.js',
+      'dev/js/post.js',
+      'D:/Project University/newsblog/node_modules/medium-editor/dist/js/medium-editor.min.js'
       //
     ])
     .pipe(concat('scripts.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest('public/javascripts'))
 );
 
